@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculadora</title>
+</head>
+<body>
+
+    <h1>Calculadora</h1>
+
+    <input type="number" id="n1" placeholder="Primeiro número">
+    <input type="number" id="n2" placeholder="Segundo número">
+
+    <button onclick="calcular()">Calcular</button>
+
+    <h2>Resultados:</h2>
+    <div id="resultado"></div>
+
+    <script>
+        function calcular() {
+            let n1 = parseFloat(document.getElementById("n1").value);
+            let n2 = parseFloat(document.getElementById("n2").value);
+
+            let resultado = `
+                Soma: ${n1 + n2}<br>
+                Subtração: ${n1 - n2}<br>
+                Multiplicação: ${n1 * n2}<br>
+                Divisão: ${n1 / n2}<br>
+                Média: ${(n1 + n2) / 2}<br>
+                Potência n1^n2: ${n1 ** n2}<br>
+                Potência n2^n1: ${n2 ** n1}<br>
+                Resto da divisão: ${n1 % n2}
+            `;
+
+            document.getElementById("resultado").innerHTML = resultado;
+        }
+    </script>
+
+</body>
+</html>
